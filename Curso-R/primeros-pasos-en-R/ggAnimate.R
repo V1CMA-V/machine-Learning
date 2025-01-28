@@ -71,5 +71,5 @@ animacion <- p + transition_states(am) +
   labs(title = "Transmicion: {closest_state}")
 
 ## Guardar la animacion como GIF
-anim_save("Animacion/boxplot.gif", animacion)
+anim_save("../Animacion/boxplot.gif", animacion)
 
