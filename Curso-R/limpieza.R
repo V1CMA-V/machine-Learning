@@ -6,7 +6,7 @@ sum(is.na(mi_vector))
 
 library(readr)
 
-nba <- read_csv("datas/nba.csv")
+nba <- read_csv("../datas/nba.csv")
 
 # Metodo 1
 sum(is.na((nba$Salary)))

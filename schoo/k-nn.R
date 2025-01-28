@@ -4,7 +4,7 @@ library(ggplot2)
 library(dplyr)
 
 # load data
-data <- readr::read_csv("schoo/fertility_measures.csv")
+data <- readr::read_csv("datas/fertility_measures.csv")
 
 # split data
 glimpse(data)
