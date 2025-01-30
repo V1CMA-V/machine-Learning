@@ -4,7 +4,7 @@ library(caret)
 library(dplyr)
 
 # Carga de datos
-DATA <- read.csv("UniversalBank.csv")
+DATA <- read.csv("schoo/naive-Bayes/Tarea/UniversalBank.csv")
 
 glimpse(DATA)
 
@@ -75,7 +75,7 @@ c(prob_d1, prob_d2, prob_d3, prob_d4, prob_d5, prob_d6)
 
 prob_e <- (prob_d1 * prob_d2 * prob_d3) /
   ((prob_d1 * prob_d2 * prob_d3) + (prob_d4 * prob_d5 * prob_d6))
-prob_e
+prob_e * 100
 
 # Inciso F)
 # Compara este valor con el obtenido en l atabla dinamica de la parte B
@@ -94,5 +94,5 @@ mod <- naiveBayes(Personal.Loan ~ ., data = train_datos)
 mod
 
 # Prediccion
-pred <- predict(mod, train_datos)
-pred[which(train_datos$CreditCard == 1 & train_datos$Online == 1),]
+pred <- predict(mod, train_datos, type = "raw")
+pred[which(train_datos$CreditCard == 1 & train_datos$Online == 1), "1"][1] * 100
