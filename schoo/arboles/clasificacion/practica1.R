@@ -1,4 +1,4 @@
-credit <- read.csv("schoo/arboles/credit.csv", stringsAsFactors = TRUE)
+credit <- read.csv("credit.csv", stringsAsFactors = TRUE)
 
 glimpse(credit)
 

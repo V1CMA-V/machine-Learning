@@ -1,6 +1,6 @@
 library(dplyr)
 
-mushrooms <- read.csv("schoo/arboles/mushrooms.csv", stringsAsFactors = TRUE)
+mushrooms <- read.csv("mushrooms.csv", stringsAsFactors = TRUE)
 
 glimpse(mushrooms)
 mushrooms$veil_type <- NULL
