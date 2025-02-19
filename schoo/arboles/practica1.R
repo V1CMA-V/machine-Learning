@@ -1,3 +1,5 @@
+library(dplyr)
+
 credit <- read.csv("schoo/arboles/credit.csv", stringsAsFactors = TRUE)
 
 glimpse(credit)
@@ -45,7 +47,7 @@ credit_boost10 <- C5.0(default ~ ., data = credit_train, trials = 10)
 
 credit_boost10
 
-summary(credti_boost10)
+summary(credit_boost10)
 
 credit_boost_pred10 <- predict(credit_boost10, credit_test)
 CrossTable(credit_test$default, credit_boost_pred10,
