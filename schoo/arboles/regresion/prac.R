@@ -37,7 +37,7 @@ summary(wine_test$quality)
 
 cor(p.rpart, wine_test$quality)
 
-# Medicion del rendimiento con el error absoluto meido
+# Medicion del rendimiento con el error absoluto medio
 
 MAE <- function (actual, predicted) {
   mean(abs(actual - predicted))
