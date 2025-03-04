@@ -1,6 +1,6 @@
 library(dplyr)
 
-churn_data <- read.csv("schoo/regresion-logistica/insurance_churn.csv")
+churn_data <- read.csv("insurance_churn.csv")
 
 prop.table(table(churn_data$churn))
 
@@ -20,7 +20,7 @@ summary(churn_model)
 
 # Cargamos el conjunto de datos para realizar predicciones y utilizar el modelo
 # para prevenir la perdida
-churn_test <- read.csv("schoo/regresion-logistica/insurance_churn_test.csv")
+churn_test <- read.csv("insurance_churn_test.csv")
 
 churn_test$churn_prob <- predict(churn_model, churn_test,
                                  type = "response")

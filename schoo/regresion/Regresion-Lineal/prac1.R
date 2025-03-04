@@ -2,7 +2,7 @@
 
 library(dplyr)
 
-df <- read.csv("schoo/Regresion-Lineal/autoinsurance.csv", stringsAsFactors = TRUE)
+df <- read.csv("autoinsurance.csv", stringsAsFactors = TRUE)
 
 glimpse(df)
 
@@ -16,10 +16,10 @@ table(df$vehicle_type)
 
 cor(df[c("age", "est_value", "miles_driven", "expenses")])
 
-pairs(df[c("age", "est_value", "miles_driven", "expenses")], pch = ".")
+pairs(df[c("age", "est_value", "miles_driven", "expenses")], pch = "")
 
 library(psych)
-pairs.panels(df[c("age", "est_value", "miles_driven", "expenses")], pch = ".")
+pairs.panels(df[c("age", "est_value", "miles_driven", "expenses")], pch = "")
 
 library(stats)
 
