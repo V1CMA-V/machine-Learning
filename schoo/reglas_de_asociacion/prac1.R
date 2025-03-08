@@ -1,6 +1,6 @@
 library(arules)
 
-grocerias <- read.transactions("schoo/asociacion/groceries.csv", sep = ",")
+grocerias <- read.transactions("schoo/reglas_de_asociacion/groceries.csv", sep = ",")
 
 summary(grocerias)
 
